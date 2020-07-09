@@ -15,12 +15,16 @@ public class Book
         this.title = title;
     }
 
-    public String getContent() {
+    public String getBookInfo() {
         return "Book '" + title + "', by " + author + ": " +  content;
     }
 
     public void setContent(String content) {
         this.content = content;
+    }
+    
+    public String getContent() {
+        return content;
     }
 
     public String getTitle() {

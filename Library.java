@@ -8,10 +8,10 @@ import java.util.Vector;
  */
 public class Library
 {
-    private String libraryName = "";
-    private Vector<Book> books = new Vector<>();
+    protected String libraryName = "";
+    protected Vector<Book> books = new Vector<>();
 
-    public Library(String name)
+     public Library(String name)
     {
         libraryName = name;
     }
@@ -39,6 +39,10 @@ public class Library
 
     public void showInventory() {
         System.out.println("Library "+ libraryName);
+        if (books.size() == 0) {
+            System.out.println("No Books in the library!");
+        }
+        
         for (Book aBook : books ) {
           System.out.println(aBook.getContent());
         }
